@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>360度環景預約系統 - 我的預約</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <!-- iOS 狀態欄 -->
+    <div class="ios-status-bar">
+        <div>9:41</div>
+        <div class="flex items-center gap-1">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- 導航欄 -->
+    <div class="ios-nav-bar">
+        <div class="absolute left-4">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        <h1 class="text-xl font-bold">我的預約</h1>
+        <div class="absolute right-4">
+            <i class="fas fa-filter"></i>
+        </div>
+    </div>
+
+    <!-- 主內容 -->
+    <div class="app-content px-4 py-5">
+        <!-- 標籤切換 -->
+        <div class="flex border-b border-gray-200 mb-5">
+            <button class="flex-1 text-center py-3 border-b-2 border-blue-500 font-bold text-blue-500">
+                即將到來
+            </button>
+            <button class="flex-1 text-center py-3 text-gray-500">
+                已完成
+            </button>
+            <button class="flex-1 text-center py-3 text-gray-500">
+                已取消
+            </button>
+        </div>
+
+        <!-- 預約列表 -->
+        <div class="space-y-4">
+            <!-- 預約項目 1 -->
+            <div class="ios-card overflow-hidden">
+                <div class="bg-blue-50 px-4 py-2 flex justify-between items-center">
+                    <div class="flex items-center">
+                        <i class="fas fa-calendar-check text-blue-500 mr-2"></i>
+                        <span class="text-blue-700 font-medium">即將到來</span>
+                    </div>
+                    <div class="text-sm text-gray-600">
+                        預約號：BK123456
+                    </div>
+                </div>
+                <div class="p-4">
+                    <div class="flex mb-4">
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0" alt="餐廳" class="w-20 h-20 rounded-lg object-cover mr-3">
+                        <div>
+                            <h3 class="font-bold mb-1">頂級日式料理</h3>
+                            <div class="flex items-center text-sm text-gray-600 mb-1">
+                                <i class="far fa-calendar-alt mr-2"></i>
+                                <span>2023/12/15 (週五)</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="far fa-clock mr-2"></i>
+                                <span>18:00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg mb-4">
+                        <div class="flex mb-2">
+                            <div class="flex-1">
+                                <div class="text-xs text-gray-500">預約人數</div>
+                                <div class="font-medium">2 人</div>
+                            </div>
+                            <div class="flex-1">
+                                <div class="text-xs text-gray-500">座位號</div>
+                                <div class="font-medium">B2 (VIP窗邊座位)</div>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-1">
+                                <div class="text-xs text-gray-500">訂單金額</div>
+                                <div class="font-medium text-blue-600">NT$ 4,180</div>
+                            </div>
+                            <div class="flex-1">
+                                <div class="text-xs text-gray-500">支付狀態</div>
+                                <div class="font-medium text-green-600">已支付</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex space-x-3">
+                        <button class="flex-1 ios-button secondary text-sm">
+                            <i class="fas fa-vr-cardboard mr-1"></i>
+                            再次查看座位
+                        </button>
+                        <button class="flex-1 ios-button text-sm">
+                            <i class="fas fa-qrcode mr-1"></i>
+                            出示預約碼
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 預約項目 2 -->
+            <div class="ios-card overflow-hidden">
+                <div class="bg-blue-50 px-4 py-2 flex justify-between items-center">
+                    <div class="flex items-center">
+                        <i class="fas fa-calendar-check text-blue-500 mr-2"></i>
+                        <span class="text-blue-700 font-medium">即將到來</span>
+                    </div>
+                    <div class="text-sm text-gray-600">
+                        預約號：BK123457
+                    </div>
+                </div>
+                <div class="p-4">
+                    <div class="flex mb-4">
+                        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="咖啡廳" class="w-20 h-20 rounded-lg object-cover mr-3">
+                        <div>
+                            <h3 class="font-bold mb-1">藝術咖啡館 - 主廚特製餐桌</h3>
+                            <div class="flex items-center text-sm text-gray-600 mb-1">
+                                <i class="far fa-calendar-alt mr-2"></i>
+                                <span>2023/12/25 (週一)</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="far fa-clock mr-2"></i>
+                                <span>12:00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg mb-4">
+                        <div class="flex mb-2">
+                            <div class="flex-1">
+                                <div class="text-xs text-gray-500">預約人數</div>
+                                <div class="font-medium">2 人</div>
+                            </div>
+                            <div class="flex-1">
+                                <div class="text-xs text-gray-500">座位號</div>
+                                <div class="font-medium">S01 (主廚特製餐桌)</div>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-1">
+                                <div class="text-xs text-gray-500">訂單金額</div>
+                                <div class="font-medium text-blue-600">NT$ 1,650</div>
+                            </div>
+                            <div class="flex-1">
+                                <div class="text-xs text-gray-500">競標狀態</div>
+                                <div class="font-medium text-yellow-600">競標成功</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex space-x-3">
+                        <button class="flex-1 ios-button secondary text-sm">
+                            <i class="fas fa-vr-cardboard mr-1"></i>
+                            查看座位
+                        </button>
+                        <button class="flex-1 ios-button text-sm">
+                            <i class="fas fa-qrcode mr-1"></i>
+                            出示預約碼
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 預約項目 3 - 等待確認 -->
+            <div class="ios-card overflow-hidden">
+                <div class="bg-yellow-50 px-4 py-2 flex justify-between items-center">
+                    <div class="flex items-center">
+                        <i class="fas fa-clock text-yellow-500 mr-2"></i>
+                        <span class="text-yellow-700 font-medium">等待確認</span>
+                    </div>
+                    <div class="text-sm text-gray-600">
+                        預約號：BK123458
+                    </div>
+                </div>
+                <div class="p-4">
+                    <div class="flex mb-4">
+                        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="咖啡廳" class="w-20 h-20 rounded-lg object-cover mr-3">
+                        <div>
+                            <h3 class="font-bold mb-1">藝術咖啡館</h3>
+                            <div class="flex items-center text-sm text-gray-600 mb-1">
+                                <i class="far fa-calendar-alt mr-2"></i>
+                                <span>2023/12/20 (週三)</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="far fa-clock mr-2"></i>
+                                <span>14:00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg mb-4">
+                        <div class="flex mb-2">
+                            <div class="flex-1">
+                                <div class="text-xs text-gray-500">預約人數</div>
+                                <div class="font-medium">4 人</div>
+                            </div>
+                            <div class="flex-1">
+                                <div class="text-xs text-gray-500">座位號</div>
+                                <div class="font-medium">C8 (四人包廂)</div>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-1">
+                                <div class="text-xs text-gray-500">訂單金額</div>
+                                <div class="font-medium text-blue-600">NT$ 800</div>
+                            </div>
+                            <div class="flex-1">
+                                <div class="text-xs text-gray-500">支付狀態</div>
+                                <div class="font-medium text-yellow-600">待支付</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex space-x-3">
+                        <button class="flex-1 ios-button secondary text-sm">
+                            <i class="fas fa-times-circle mr-1"></i>
+                            取消預約
+                        </button>
+                        <button class="flex-1 ios-button text-sm">
+                            <i class="fas fa-credit-card mr-1"></i>
+                            立即支付
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 沒有更多預約的提示 -->
+        <div class="mt-6 text-center text-gray-500 text-sm">
+            沒有更多預約了
+        </div>
+
+        <!-- 新增預約按鈕 -->
+        <div class="fixed bottom-24 right-4">
+            <button class="w-14 h-14 bg-blue-500 rounded-full flex items-center justify-center shadow-lg">
+                <i class="fas fa-plus text-white text-xl"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- 底部導航 -->
+    <div class="ios-tab-bar">
+        <div class="ios-tab-bar-item" onclick="window.location.href='home.html'">
+            <i class="fas fa-home ios-tab-bar-icon"></i>
+            <span>首頁</span>
+        </div>
+        <div class="ios-tab-bar-item" onclick="window.location.href='home.html'">
+            <i class="fas fa-search ios-tab-bar-icon"></i>
+            <span>探索</span>
+        </div>
+        <div class="ios-tab-bar-item active">
+            <i class="fas fa-calendar-alt ios-tab-bar-icon"></i>
+            <span>預約</span>
+        </div>
+        <div class="ios-tab-bar-item" onclick="window.location.href='home.html'">
+            <i class="far fa-user ios-tab-bar-icon"></i>
+            <span>我的</span>
+        </div>
+    </div>
+<a href="index.html" class="gallery-button" title="切換到展示模式"><i class="fas fa-th-large"></i></a></body>
+</html> 

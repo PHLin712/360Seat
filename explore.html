@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>360度環景預約系統 - 探索商家</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <!-- iOS 狀態欄 -->
+    <div class="ios-status-bar">
+        <div>9:41</div>
+        <div class="flex items-center gap-1">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- 導航欄 -->
+    <div class="ios-nav-bar">
+        <h1 class="text-xl font-bold">探索商家</h1>
+    </div>
+
+    <!-- 主內容 -->
+    <div class="app-content">
+        <!-- 搜索欄 -->
+        <div class="p-4">
+            <div class="relative mb-4">
+                <input type="text" class="ios-input pr-10" placeholder="搜索餐廳、劇院或場所...">
+                <i class="fas fa-search absolute right-4 top-4 text-gray-400"></i>
+            </div>
+        </div>
+
+        <!-- 篩選器標籤 -->
+        <div class="px-4 overflow-x-auto">
+            <div class="flex space-x-2 pb-3">
+                <button class="px-3 py-1.5 bg-blue-100 text-blue-600 rounded-full text-sm font-medium flex items-center">
+                    <i class="fas fa-filter mr-1"></i>
+                    篩選
+                </button>
+                <button class="px-3 py-1.5 bg-white border border-gray-300 text-gray-700 rounded-full text-sm font-medium">
+                    評分最高
+                </button>
+                <button class="px-3 py-1.5 bg-white border border-gray-300 text-gray-700 rounded-full text-sm font-medium">
+                    價格
+                </button>
+                <button class="px-3 py-1.5 bg-white border border-gray-300 text-gray-700 rounded-full text-sm font-medium">
+                    距離
+                </button>
+                <button class="px-3 py-1.5 bg-white border border-gray-300 text-gray-700 rounded-full text-sm font-medium">
+                    當前可預約
+                </button>
+            </div>
+        </div>
+
+        <!-- 地圖視圖切換 -->
+        <div class="bg-white p-2 mb-3 flex justify-center border-b border-t border-gray-200">
+            <div class="flex rounded-lg overflow-hidden border border-gray-300">
+                <button class="px-4 py-1.5 bg-blue-500 text-white text-sm font-medium">
+                    <i class="fas fa-list-ul mr-1"></i>
+                    列表
+                </button>
+                <button class="px-4 py-1.5 bg-white text-gray-700 text-sm font-medium">
+                    <i class="fas fa-map-marker-alt mr-1"></i>
+                    地圖
+                </button>
+            </div>
+        </div>
+
+        <!-- 商家列表 -->
+        <div class="px-4 pb-4">
+            <!-- 餐廳 -->
+            <div class="ios-card mb-4">
+                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0" alt="頂級日式料理" class="venue-image">
+                <div class="p-3">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold">頂級日式料理</h3>
+                            <div class="flex items-center text-yellow-500 text-sm mt-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-gray-500 ml-1">5.0 (210)</span>
+                            </div>
+                        </div>
+                        <div class="px-2 py-1 bg-green-100 text-green-600 rounded-lg text-xs font-medium">有空位</div>
+                    </div>
+                    <div class="flex items-center mt-2 text-sm text-gray-600">
+                        <i class="fas fa-map-marker-alt mr-1"></i>
+                        <span>大安區敦化南路45號12樓</span>
+                    </div>
+                    <div class="mt-2 flex flex-wrap">
+                        <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded mr-2 mb-2">精緻料理</span>
+                        <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded mr-2 mb-2">日本料理</span>
+                        <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded mr-2 mb-2">視野絕佳</span>
+                    </div>
+                    <div class="mt-2 flex justify-between items-center">
+                        <div>
+                            <span class="text-xs text-gray-500">起價</span>
+                            <div class="text-lg font-bold text-blue-600">NT$ 2,500</div>
+                        </div>
+                        <button class="ios-button text-sm">360°預覽</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 劇院 -->
+            <div class="ios-card mb-4">
+                <img src="https://images.unsplash.com/photo-1513106580091-1d82408b8cd6" alt="國家劇院" class="venue-image">
+                <div class="p-3">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold">國家劇院</h3>
+                            <div class="flex items-center text-yellow-500 text-sm mt-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="text-gray-500 ml-1">4.2 (350)</span>
+                            </div>
+                        </div>
+                        <div class="px-2 py-1 bg-yellow-100 text-yellow-600 rounded-lg text-xs font-medium">即將售罄</div>
+                    </div>
+                    <div class="flex items-center mt-2 text-sm text-gray-600">
+                        <i class="fas fa-map-marker-alt mr-1"></i>
+                        <span>中正區中山南路21-1號</span>
+                    </div>
+                    <div class="mt-2 flex flex-wrap">
+                        <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded mr-2 mb-2">經典劇目</span>
+                        <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded mr-2 mb-2">歌劇</span>
+                    </div>
+                    <div class="mt-2 flex justify-between items-center">
+                        <div>
+                            <span class="text-xs text-gray-500">起價</span>
+                            <div class="text-lg font-bold text-blue-600">NT$ 800</div>
+                        </div>
+                        <button class="ios-button text-sm">360°預覽</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 咖啡廳 -->
+            <div class="ios-card mb-4">
+                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="藝術咖啡館" class="venue-image">
+                <div class="p-3">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold">藝術咖啡館</h3>
+                            <div class="flex items-center text-yellow-500 text-sm mt-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="text-gray-500 ml-1">4.7 (185)</span>
+                            </div>
+                        </div>
+                        <div class="px-2 py-1 bg-green-100 text-green-600 rounded-lg text-xs font-medium">有空位</div>
+                    </div>
+                    <div class="flex items-center mt-2 text-sm text-gray-600">
+                        <i class="fas fa-map-marker-alt mr-1"></i>
+                        <span>松山區民生東路三段113號</span>
+                    </div>
+                    <div class="mt-2 flex flex-wrap">
+                        <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded mr-2 mb-2">藝術風格</span>
+                        <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded mr-2 mb-2">手沖咖啡</span>
+                        <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded mr-2 mb-2">安靜空間</span>
+                    </div>
+                    <div class="mt-2 flex justify-between items-center">
+                        <div>
+                            <span class="text-xs text-gray-500">起價</span>
+                            <div class="text-lg font-bold text-blue-600">NT$ 150</div>
+                        </div>
+                        <button class="ios-button text-sm">360°預覽</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 電影院 -->
+            <div class="ios-card">
+                <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c" alt="豪華電影院" class="venue-image">
+                <div class="p-3">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold">豪華電影院 VIP廳</h3>
+                            <div class="flex items-center text-yellow-500 text-sm mt-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="text-gray-500 ml-1">4.5 (320)</span>
+                            </div>
+                        </div>
+                        <div class="px-2 py-1 bg-red-100 text-red-600 rounded-lg text-xs font-medium">搶手位</div>
+                    </div>
+                    <div class="flex items-center mt-2 text-sm text-gray-600">
+                        <i class="fas fa-map-marker-alt mr-1"></i>
+                        <span>信義區松高路12號4樓</span>
+                    </div>
+                    <div class="mt-2 flex flex-wrap">
+                        <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded mr-2 mb-2">IMAX</span>
+                        <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded mr-2 mb-2">沙發座椅</span>
+                        <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded mr-2 mb-2">美食服務</span>
+                    </div>
+                    <div class="mt-2 flex justify-between items-center">
+                        <div>
+                            <span class="text-xs text-gray-500">起價</span>
+                            <div class="text-lg font-bold text-blue-600">NT$ 450</div>
+                        </div>
+                        <button class="ios-button text-sm">360°預覽</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部導航 -->
+    <div class="ios-tab-bar">
+        <div class="ios-tab-bar-item" onclick="window.location.href='home.html'">
+            <i class="fas fa-home ios-tab-bar-icon"></i>
+            <span>首頁</span>
+        </div>
+        <div class="ios-tab-bar-item active">
+            <i class="fas fa-search ios-tab-bar-icon"></i>
+            <span>探索</span>
+        </div>
+        <div class="ios-tab-bar-item" onclick="window.location.href='home.html'">
+            <div class="relative">
+                <i class="fas fa-calendar-alt ios-tab-bar-icon"></i>
+                <div class="badge">2</div>
+            </div>
+            <span>預約</span>
+        </div>
+        <div class="ios-tab-bar-item" onclick="window.location.href='home.html'">
+            <i class="far fa-user ios-tab-bar-icon"></i>
+            <span>我的</span>
+        </div>
+    </div>
+<a href="index.html" class="gallery-button" title="切換到展示模式"><i class="fas fa-th-large"></i></a></body>
+</html> 

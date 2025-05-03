@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>360° Seat - 環景預約首頁</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <!-- iOS 狀態欄 -->
+    <div class="ios-status-bar">
+        <div>9:41</div>
+        <div class="flex items-center gap-1">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- 導航欄 -->
+    <div class="ios-nav-bar">
+        <div class="app-logo mr-2">
+            <div class="app-logo-square">
+                <div class="app-logo-circle">S</div>
+            </div>
+        </div>
+        <h1 class="text-xl font-bold">360° Seat</h1>
+    </div>
+
+    <!-- 主內容 -->
+    <div class="app-content p-4">
+        <!-- 搜索欄 -->
+        <div class="relative mb-4">
+            <input type="text" class="ios-input pr-10" placeholder="搜索餐廳、劇院或場所...">
+            <i class="fas fa-search absolute right-4 top-4 text-gray-400"></i>
+        </div>
+
+        <!-- 分類按鈕組 -->
+        <div class="flex justify-between mb-6 overflow-x-auto py-2">
+            <div class="flex flex-col items-center mr-4 cursor-pointer" onclick="window.location.href='explore.html'">
+                <div class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-1">
+                    <i class="fas fa-utensils text-blue-600 text-xl"></i>
+                </div>
+                <span class="text-xs">餐廳</span>
+            </div>
+            <div class="flex flex-col items-center mr-4 cursor-pointer" onclick="window.location.href='explore.html'">
+                <div class="w-14 h-14 rounded-full bg-purple-100 flex items-center justify-center mb-1">
+                    <i class="fas fa-film text-purple-600 text-xl"></i>
+                </div>
+                <span class="text-xs">電影院</span>
+            </div>
+            <div class="flex flex-col items-center mr-4 cursor-pointer" onclick="window.location.href='explore.html'">
+                <div class="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center mb-1">
+                    <i class="fas fa-coffee text-green-600 text-xl"></i>
+                </div>
+                <span class="text-xs">咖啡廳</span>
+            </div>
+            <div class="flex flex-col items-center mr-4 cursor-pointer" onclick="window.location.href='explore.html'">
+                <div class="w-14 h-14 rounded-full bg-yellow-100 flex items-center justify-center mb-1">
+                    <i class="fas fa-theater-masks text-yellow-600 text-xl"></i>
+                </div>
+                <span class="text-xs">劇院</span>
+            </div>
+            <div class="flex flex-col items-center cursor-pointer" onclick="window.location.href='explore.html'">
+                <div class="w-14 h-14 rounded-full bg-red-100 flex items-center justify-center mb-1">
+                    <i class="fas fa-shopping-bag text-red-600 text-xl"></i>
+                </div>
+                <span class="text-xs">更多</span>
+            </div>
+        </div>
+
+        <!-- 熱門預訂 -->
+        <div class="mb-6">
+            <div class="flex justify-between items-center mb-3">
+                <h2 class="text-lg font-bold">熱門預訂</h2>
+                <a href="explore.html" class="text-highlight">查看全部</a>
+            </div>
+            <div class="ios-card animate-fade-in cursor-pointer" onclick="window.location.href='venue_detail.html'">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4" alt="餐廳" class="venue-image">
+                <div class="p-3">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold">米其林三星 - 侘寂料理</h3>
+                            <div class="flex items-center text-yellow-500 text-sm mt-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="text-gray-500 ml-1">4.8 (382)</span>
+                            </div>
+                        </div>
+                        <div class="px-2 py-1 bg-red-100 text-red-600 rounded-lg text-xs font-medium">高峰時段</div>
+                    </div>
+                    <div class="flex items-center mt-2 text-sm text-gray-600">
+                        <i class="fas fa-map-marker-alt mr-1"></i>
+                        <span>信義區松智路17號46樓</span>
+                    </div>
+                    <div class="mt-3 flex justify-between items-center">
+                        <div>
+                            <span class="text-xs text-gray-500">起價</span>
+                            <div class="text-lg font-bold text-blue-600">NT$ 1,200</div>
+                        </div>
+                        <button class="ios-button text-sm" onclick="window.location.href='360_view.html'; event.stopPropagation();">查看座位</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 競價專區 -->
+        <div class="mb-6">
+            <div class="flex justify-between items-center mb-3">
+                <h2 class="text-lg font-bold">競價專區</h2>
+                <a href="explore.html" class="text-highlight">查看全部</a>
+            </div>
+            <div class="ios-card animate-fade-in cursor-pointer" onclick="window.location.href='venue_detail.html'">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="藝術咖啡館" class="venue-image">
+                    <div class="absolute top-3 right-3 px-3 py-1 bg-white bg-opacity-80 rounded-full text-xs font-bold text-red-600 flex items-center">
+                        <i class="fas fa-gavel mr-1"></i>
+                        <span>競價中</span>
+                    </div>
+                </div>
+                <div class="p-3">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold">藝術咖啡館 - 主廚特製餐桌</h3>
+                            <div class="flex items-center text-sm mt-1">
+                                <i class="far fa-calendar-alt text-gray-500 mr-1"></i>
+                                <span class="text-gray-600">2023/12/25 12:00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center mt-2 text-sm text-gray-600">
+                        <i class="fas fa-map-marker-alt mr-1"></i>
+                        <span>台北市信義區松高路88號</span>
+                    </div>
+                    <div class="mt-3 flex justify-between items-center">
+                        <div>
+                            <span class="text-xs text-gray-500">目前最高出價</span>
+                            <div class="text-lg font-bold text-red-600">NT$ 1,580</div>
+                        </div>
+                        <button class="ios-button text-sm" onclick="window.location.href='bidding.html'; event.stopPropagation();">參與競標</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 附近的場所 -->
+        <div>
+            <div class="flex justify-between items-center mb-3">
+                <h2 class="text-lg font-bold">附近的場所</h2>
+                <a href="explore.html" class="text-highlight">查看全部</a>
+            </div>
+            <div class="space-y-3">
+                <div class="ios-card flex overflow-hidden cursor-pointer" onclick="window.location.href='venue_detail.html'">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd" alt="沙拉餐廳" class="w-24 h-24 object-cover">
+                    <div class="p-3 flex-1">
+                        <h3 class="font-medium">有機沙拉專賣店</h3>
+                        <div class="flex items-center text-yellow-500 text-xs mt-1">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span class="text-gray-500 ml-1">4.0 (120)</span>
+                        </div>
+                        <div class="flex justify-between items-center mt-2">
+                            <span class="text-xs text-gray-500">500m</span>
+                            <div class="text-sm font-bold text-blue-600">NT$ 350起</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ios-card flex overflow-hidden cursor-pointer" onclick="window.location.href='venue_detail.html'">
+                    <img src="https://images.unsplash.com/photo-1559329007-40df8a9345d8" alt="咖啡廳" class="w-24 h-24 object-cover">
+                    <div class="p-3 flex-1">
+                        <h3 class="font-medium">黑沃咖啡 台北101店</h3>
+                        <div class="flex items-center text-yellow-500 text-xs mt-1">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="text-gray-500 ml-1">4.6 (310)</span>
+                        </div>
+                        <div class="flex justify-between items-center mt-2">
+                            <span class="text-xs text-gray-500">350m</span>
+                            <div class="text-sm font-bold text-blue-600">NT$ 280起</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部導航 -->
+    <div class="ios-tab-bar">
+        <div class="ios-tab-bar-item active" onclick="window.location.href='home.html'">
+            <i class="fas fa-home ios-tab-bar-icon"></i>
+            <span>首頁</span>
+        </div>
+        <div class="ios-tab-bar-item" onclick="window.location.href='explore.html'">
+            <i class="fas fa-search ios-tab-bar-icon"></i>
+            <span>探索</span>
+        </div>
+        <div class="ios-tab-bar-item" onclick="window.location.href='my_bookings.html'">
+            <div class="relative">
+                <i class="fas fa-calendar-alt ios-tab-bar-icon"></i>
+                <div class="badge">2</div>
+            </div>
+            <span>預約</span>
+        </div>
+        <div class="ios-tab-bar-item" onclick="window.location.href='profile.html'">
+            <i class="far fa-user ios-tab-bar-icon"></i>
+            <span>我的</span>
+        </div>
+    </div>
+<a href="index.html" class="gallery-button" title="切換到展示模式"><i class="fas fa-th-large"></i></a></body>
+</html> 

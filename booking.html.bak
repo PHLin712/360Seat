@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>360度環景預約系統 - 預約流程</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <!-- iOS 狀態欄 -->
+    <div class="ios-status-bar">
+        <div>9:41</div>
+        <div class="flex items-center gap-1">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- 導航欄 -->
+    <div class="ios-nav-bar">
+        <div class="absolute left-4 cursor-pointer" onclick="window.location.href='360_view.html'">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        <h1 class="text-xl font-bold">完成預約</h1>
+    </div>
+
+    <!-- 主內容 -->
+    <div class="app-content p-4">
+        <!-- 進度指示器 -->
+        <div class="flex items-center justify-between mb-6">
+            <div class="flex flex-col items-center">
+                <div class="w-8 h-8 rounded-full bg-blue-500 text-white flex items-center justify-center mb-1">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="text-xs font-medium text-blue-500">選擇座位</div>
+            </div>
+            <div class="flex-1 h-1 bg-blue-200 mx-2"></div>
+            <div class="flex flex-col items-center">
+                <div class="w-8 h-8 rounded-full bg-blue-500 text-white flex items-center justify-center mb-1">
+                    <i class="fas fa-user-plus"></i>
+                </div>
+                <div class="text-xs font-medium text-blue-500">填寫資料</div>
+            </div>
+            <div class="flex-1 h-1 bg-gray-300 mx-2"></div>
+            <div class="flex flex-col items-center">
+                <div class="w-8 h-8 rounded-full bg-gray-300 text-gray-500 flex items-center justify-center mb-1">
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="text-xs font-medium text-gray-500">確認預約</div>
+            </div>
+        </div>
+
+        <!-- 預約信息摘要 -->
+        <div class="ios-card mb-4">
+            <div class="border-b border-gray-200 p-4">
+                <h2 class="font-bold text-lg mb-2">預約詳情</h2>
+                <div class="text-sm text-gray-600 mb-2">
+                    <i class="fas fa-store text-gray-500 mr-2"></i>
+                    <span>頂級日式料理</span>
+                </div>
+                <div class="text-sm text-gray-600 mb-2">
+                    <i class="far fa-calendar-alt text-gray-500 mr-2"></i>
+                    <span>2023年12月15日 (週五)</span>
+                </div>
+                <div class="text-sm text-gray-600 mb-2">
+                    <i class="far fa-clock text-gray-500 mr-2"></i>
+                    <span>晚上 18:00</span>
+                </div>
+                <div class="text-sm text-gray-600">
+                    <i class="fas fa-user-friends text-gray-500 mr-2"></i>
+                    <span>2位用餐者</span>
+                </div>
+            </div>
+            <div class="p-4">
+                <h3 class="font-bold mb-2">座位信息</h3>
+                <div class="flex items-center mb-2">
+                    <div class="w-5 h-5 rounded-full bg-yellow-400 flex items-center justify-center text-xs font-bold text-white mr-2">
+                        B
+                    </div>
+                    <span class="text-sm">B2 - VIP窗邊座位</span>
+                </div>
+                <div class="text-sm text-gray-600 mb-3">
+                    <i class="fas fa-info-circle text-gray-500 mr-2"></i>
+                    <span>包含主廚特製套餐及迎賓香檳</span>
+                </div>
+                <div class="bg-yellow-50 p-3 rounded-lg border border-yellow-200 text-sm text-yellow-700">
+                    <i class="fas fa-crown text-yellow-500 mr-1"></i>
+                    您選擇了頂級座位，此位置位於靠窗區域，可俯瞰台北夜景
+                </div>
+            </div>
+        </div>
+
+        <!-- 客戶信息表單 -->
+        <div class="ios-card mb-4">
+            <div class="p-4 border-b border-gray-200">
+                <h2 class="font-bold text-lg mb-4">您的資料</h2>
+                
+                <div class="mb-3">
+                    <label class="block text-sm font-medium text-gray-700 mb-1">姓名 *</label>
+                    <input type="text" class="ios-input" placeholder="請輸入您的姓名">
+                </div>
+                
+                <div class="mb-3">
+                    <label class="block text-sm font-medium text-gray-700 mb-1">手機號碼 *</label>
+                    <input type="tel" class="ios-input" placeholder="請輸入您的手機號碼">
+                </div>
+                
+                <div class="mb-3">
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                    <input type="email" class="ios-input" placeholder="請輸入您的Email">
+                </div>
+            </div>
+            
+            <div class="p-4">
+                <h3 class="font-bold mb-3">特殊需求</h3>
+                <textarea class="ios-input h-24" placeholder="若您有任何特殊需求或飲食限制，請在此說明"></textarea>
+            </div>
+        </div>
+
+        <!-- 支付方式選擇 -->
+        <div class="ios-card mb-4">
+            <div class="p-4">
+                <h2 class="font-bold text-lg mb-3">支付方式</h2>
+                
+                <div class="mb-2 flex items-center">
+                    <input type="radio" id="pay-later" name="payment-method" class="mr-2" checked>
+                    <label for="pay-later" class="flex items-center">
+                        <i class="fas fa-store text-gray-600 mr-2"></i>
+                        <span>到店付款</span>
+                    </label>
+                </div>
+                
+                <div class="mb-2 flex items-center">
+                    <input type="radio" id="credit-card" name="payment-method" class="mr-2">
+                    <label for="credit-card" class="flex items-center">
+                        <i class="far fa-credit-card text-gray-600 mr-2"></i>
+                        <span>信用卡預付</span>
+                    </label>
+                </div>
+                
+                <div class="mb-2 flex items-center">
+                    <input type="radio" id="line-pay" name="payment-method" class="mr-2">
+                    <label for="line-pay" class="flex items-center">
+                        <i class="fab fa-line text-green-600 mr-2"></i>
+                        <span>LINE Pay</span>
+                    </label>
+                </div>
+                
+                <div class="flex items-center">
+                    <input type="radio" id="apple-pay" name="payment-method" class="mr-2">
+                    <label for="apple-pay" class="flex items-center">
+                        <i class="fab fa-apple-pay text-black mr-2 text-lg"></i>
+                        <span>Apple Pay</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- 預約條款 -->
+        <div class="mb-5">
+            <div class="flex items-start mb-3">
+                <input type="checkbox" class="mt-1 mr-2">
+                <div class="text-sm text-gray-600">
+                    我已閱讀並同意<a href="#" class="text-blue-500">預約條款</a>及<a href="#" class="text-blue-500">隱私政策</a>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <input type="checkbox" class="mt-1 mr-2">
+                <div class="text-sm text-gray-600">
+                    我同意接收相關優惠及活動資訊
+                </div>
+            </div>
+        </div>
+
+        <!-- 費用明細 -->
+        <div class="ios-card mb-5">
+            <div class="p-4">
+                <h2 class="font-bold text-lg mb-3">費用明細</h2>
+                <div class="flex justify-between mb-2 text-sm">
+                    <span>VIP座位 B2</span>
+                    <span>NT$ 3,800</span>
+                </div>
+                <div class="flex justify-between mb-2 text-sm">
+                    <span>服務費 (10%)</span>
+                    <span>NT$ 380</span>
+                </div>
+                <div class="flex justify-between font-bold border-t border-gray-200 pt-2 mt-2">
+                    <span>總計</span>
+                    <span class="text-blue-600">NT$ 4,180</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部按鈕 -->
+        <div class="flex space-x-3">
+            <button class="flex-1 ios-button secondary" onclick="window.location.href='360_view.html'">
+                返回
+            </button>
+            <button class="flex-1 ios-button" onclick="window.location.href='my_bookings.html'">
+                下一步
+            </button>
+        </div>
+
+        <!-- 預約政策提示 -->
+        <div class="text-xs text-gray-500 mt-4">
+            <p class="mb-1">* 預約政策: 若需取消預約，請提前 24 小時通知，否則將收取 NT$ 1,000 取消費用。</p>
+            <p>* 該座位目前有 3 位用戶正在查看，請盡快完成預約。</p>
+        </div>
+    </div>
+</body>
+</html> 

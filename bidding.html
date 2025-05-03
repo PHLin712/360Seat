@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>360度環景預約系統 - 座位競價</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .pulse-animation {
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .timer {
+            font-variant-numeric: tabular-nums;
+        }
+        
+        .bid-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #007aff;
+            cursor: pointer;
+            border: 2px solid white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+        
+        .bid-slider::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #007aff;
+            cursor: pointer;
+            border: 2px solid white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+        
+        .bid-slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 8px;
+            border-radius: 5px;
+            background: #e0e0e0;
+            outline: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- iOS 狀態欄 -->
+    <div class="ios-status-bar">
+        <div>9:41</div>
+        <div class="flex items-center gap-1">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- 導航欄 -->
+    <div class="ios-nav-bar">
+        <div class="absolute left-4">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        <h1 class="text-xl font-bold">座位競價</h1>
+    </div>
+
+    <!-- 主內容 -->
+    <div class="app-content p-4">
+        <!-- 競價事件標題 -->
+        <div class="ios-card mb-4">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="藝術咖啡館" class="venue-image">
+            <div class="p-4">
+                <h2 class="text-xl font-bold mb-2">藝術咖啡館 - 限量主廚餐桌</h2>
+                <div class="flex items-center text-sm text-gray-600 mb-2">
+                    <i class="far fa-calendar-alt mr-2"></i>
+                    <span>2023/12/25 12:00-14:00</span>
+                </div>
+                <div class="flex items-center text-sm text-gray-600">
+                    <i class="fas fa-map-marker-alt mr-2"></i>
+                    <span>台北市信義區松高路88號</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 倒計時區域 -->
+        <div class="ios-card mb-4 p-4 text-center">
+            <h3 class="font-bold mb-2">競標結束倒計時</h3>
+            <div class="flex justify-center items-center space-x-2 mb-3">
+                <div class="bg-blue-600 text-white rounded-lg p-2 w-14 h-14 flex flex-col justify-center">
+                    <span class="text-sm">小時</span>
+                    <span class="text-xl font-bold timer">05</span>
+                </div>
+                <div class="text-2xl font-bold">:</div>
+                <div class="bg-blue-600 text-white rounded-lg p-2 w-14 h-14 flex flex-col justify-center">
+                    <span class="text-sm">分鐘</span>
+                    <span class="text-xl font-bold timer">43</span>
+                </div>
+                <div class="text-2xl font-bold">:</div>
+                <div class="bg-blue-600 text-white rounded-lg p-2 w-14 h-14 flex flex-col justify-center">
+                    <span class="text-sm">秒</span>
+                    <span class="text-xl font-bold timer">21</span>
+                </div>
+            </div>
+            <p class="text-sm text-gray-600">競標將於 2023/12/20 23:59 結束</p>
+        </div>
+
+        <!-- 座位資訊 -->
+        <div class="ios-card mb-4">
+            <div class="p-4 border-b border-gray-200">
+                <h3 class="font-bold mb-3">競標座位詳情</h3>
+                <div class="flex mb-3">
+                    <div class="w-24 h-24 bg-blue-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                        <span class="text-xl font-bold text-blue-600">S01</span>
+                    </div>
+                    <div>
+                        <div class="font-medium mb-1">主廚特製餐桌</div>
+                        <div class="text-sm text-gray-600 mb-1">位於窗邊，獨立空間，享受主廚每週更新的特製餐點</div>
+                        <div class="flex items-center">
+                            <span class="text-xs bg-yellow-100 text-yellow-600 px-2 py-1 rounded mr-2">精品座位</span>
+                            <span class="text-xs bg-red-100 text-red-600 px-2 py-1 rounded">限量供應</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-3 rounded-lg text-sm">
+                    <div class="flex items-center text-gray-600 mb-1">
+                        <i class="fas fa-eye mr-2"></i>
+                        <span>目前有 8 人正在查看此座位</span>
+                    </div>
+                    <div class="flex items-center text-gray-600">
+                        <i class="fas fa-users mr-2"></i>
+                        <span>已有 5 人參與競標</span>
+                    </div>
+                </div>
+            </div>
+            <div class="p-4">
+                <div class="flex justify-between mb-2">
+                    <span class="font-medium">原始售價</span>
+                    <span class="font-medium">NT$ 580</span>
+                </div>
+                <div class="flex justify-between mb-2">
+                    <div class="flex items-center">
+                        <span class="font-medium text-red-600">目前最高出價</span>
+                        <div class="pulse-animation ml-2 w-2 h-2 bg-red-500 rounded-full"></div>
+                    </div>
+                    <span class="font-bold text-red-600">NT$ 1,580</span>
+                </div>
+                <div class="flex justify-between text-sm text-gray-600">
+                    <span>最高出價者</span>
+                    <span>使用者 C*****9</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 出價區域 -->
+        <div class="ios-card mb-5">
+            <div class="p-4 border-b border-gray-200">
+                <h3 class="font-bold mb-3">您的出價</h3>
+                <div class="mb-4">
+                    <div class="flex justify-between mb-2">
+                        <span class="text-sm text-gray-600">最低加價金額</span>
+                        <span class="text-sm">NT$ 50</span>
+                    </div>
+                    <div class="relative mb-4">
+                        <input type="number" value="1650" class="ios-input pr-20 text-right font-bold text-lg" min="1630" step="50">
+                        <div class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500">
+                            NT$
+                        </div>
+                    </div>
+                    <input type="range" min="1630" max="2500" value="1650" step="50" class="bid-slider mb-1">
+                    <div class="flex justify-between text-xs text-gray-500">
+                        <span>NT$ 1,630</span>
+                        <span>NT$ 2,500</span>
+                    </div>
+                </div>
+                <div class="bg-blue-50 p-3 rounded-lg mb-4">
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-info-circle text-blue-500 mr-2"></i>
+                        <span class="font-medium text-blue-700">競標提示</span>
+                    </div>
+                    <p class="text-sm text-blue-600">
+                        設置更高的出價，可以提高您贏得這個座位的機會。如果您勝出，將只需支付超過第二高出價 NT$ 50 的金額。
+                    </p>
+                </div>
+                <div class="flex items-start mb-4">
+                    <input type="checkbox" class="mt-1 mr-2">
+                    <div class="text-sm text-gray-600">
+                        開啟自動競標，當有人超過我的出價時自動加價 NT$ 50，直到我設定的最高出價金額
+                    </div>
+                </div>
+                <button class="ios-button w-full">
+                    <i class="fas fa-gavel mr-1"></i>
+                    確認出價
+                </button>
+            </div>
+            <div class="p-4">
+                <h3 class="font-bold mb-3">您的競標歷史</h3>
+                <div class="space-y-3">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <div class="text-sm">NT$ 1,420</div>
+                            <div class="text-xs text-gray-500">2023/12/18 15:30</div>
+                        </div>
+                        <span class="text-xs bg-red-100 text-red-600 px-2 py-1 rounded">已超過</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <div class="text-sm">NT$ 1,250</div>
+                            <div class="text-xs text-gray-500">2023/12/17 10:15</div>
+                        </div>
+                        <span class="text-xs bg-red-100 text-red-600 px-2 py-1 rounded">已超過</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <div class="text-sm">NT$ 980</div>
+                            <div class="text-xs text-gray-500">2023/12/16 18:45</div>
+                        </div>
+                        <span class="text-xs bg-red-100 text-red-600 px-2 py-1 rounded">已超過</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 其他座位推薦 -->
+        <div class="mb-4">
+            <h3 class="font-bold mb-3">其他推薦座位</h3>
+            <div class="space-y-3">
+                <div class="ios-card flex overflow-hidden">
+                    <div class="flex items-center justify-center bg-green-100 w-14 h-14 flex-shrink-0 m-3">
+                        <span class="font-bold text-green-600">B12</span>
+                    </div>
+                    <div class="p-3 flex-1">
+                        <div class="flex justify-between">
+                            <h4 class="font-medium">花園區座位</h4>
+                            <div class="text-sm font-bold text-blue-600">NT$ 480</div>
+                        </div>
+                        <div class="flex items-center text-xs text-gray-500 mt-1">
+                            <i class="fas fa-leaf mr-1"></i>
+                            <span>室外花園，環境優美寧靜</span>
+                        </div>
+                        <div class="mt-1">
+                            <span class="text-xs bg-green-100 text-green-600 px-1.5 py-0.5 rounded">可直接購買</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="ios-card flex overflow-hidden">
+                    <div class="flex items-center justify-center bg-yellow-100 w-14 h-14 flex-shrink-0 m-3">
+                        <span class="font-bold text-yellow-600">C05</span>
+                    </div>
+                    <div class="p-3 flex-1">
+                        <div class="flex justify-between">
+                            <h4 class="font-medium">吧台座位</h4>
+                            <div class="text-sm font-bold text-red-600">NT$ 820</div>
+                        </div>
+                        <div class="flex items-center text-xs text-gray-500 mt-1">
+                            <i class="fas fa-gavel mr-1"></i>
+                            <span>競標中 (還剩 10 小時)</span>
+                        </div>
+                        <div class="mt-1">
+                            <span class="text-xs bg-yellow-100 text-yellow-600 px-1.5 py-0.5 rounded">當前出價人數: 3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 競標規則 -->
+        <div class="mb-4 bg-white rounded-lg p-4">
+            <h3 class="font-bold mb-2">競標規則</h3>
+            <div class="text-sm text-gray-600 space-y-2">
+                <p>1. 本次競標採用密封競價方式，最終價格為高於第二高出價 NT$ 50 的金額。</p>
+                <p>2. 每次加價必須至少為 NT$ 50 或其倍數。</p>
+                <p>3. 開啟自動競標功能可在有人超過您的出價時自動加價。</p>
+                <p>4. 競標結束後 24 小時內必須完成支付，否則座位將釋放給次高出價者。</p>
+                <p>5. 一旦成功出價，即表示您同意接受相關條款及規定。</p>
+            </div>
+        </div>
+
+        <!-- 安全保障 -->
+        <div class="flex items-center justify-center mb-5 text-sm text-gray-500">
+            <i class="fas fa-shield-alt mr-2"></i>
+            <span>安全支付保障 | 100% 座位真實性保證</span>
+        </div>
+    </div>
+<a href="index.html" class="gallery-button" title="切換到展示模式"><i class="fas fa-th-large"></i></a></body>
+</html> 

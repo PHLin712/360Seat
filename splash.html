@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>360° Seat - 歡迎</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .splash-bg {
+            background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            position: relative;
+        }
+        
+        .splash-bg::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(37, 99, 235, 0.8));
+        }
+        
+        .content-container {
+            position: relative;
+            z-index: 10;
+        }
+        
+        .splash-logo-container {
+            width: 120px;
+            height: 120px;
+            background-color: white;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            margin: 0 auto;
+        }
+        
+        .splash-logo-circle {
+            width: 90px;
+            height: 90px;
+            background-color: #2563EB;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 48px;
+        }
+        
+        @keyframes fadeUp {
+            from { 
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-up {
+            animation: fadeUp 0.8s ease-out forwards;
+        }
+        
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+        
+        .delay-400 {
+            animation-delay: 0.4s;
+        }
+        
+        .delay-600 {
+            animation-delay: 0.6s;
+        }
+    </style>
+</head>
+<body>
+    <!-- iOS 狀態欄 -->
+    <div class="ios-status-bar bg-transparent text-white">
+        <div>9:41</div>
+        <div class="flex items-center gap-1">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- 啟動畫面背景 -->
+    <div class="splash-bg">
+        <div class="content-container h-full flex flex-col justify-center px-8">
+            <div class="animate-fade-up opacity-0">
+                <div class="splash-logo-container mb-8">
+                    <div class="splash-logo-circle">S</div>
+                </div>
+            </div>
+            
+            <h1 class="text-4xl font-bold text-white text-center mb-3 animate-fade-up opacity-0 delay-200">360° Seat</h1>
+            <p class="text-xl text-white text-center mb-12 opacity-80 animate-fade-up opacity-0 delay-400">探索座位，體驗不同的視角</p>
+            
+            <div class="space-y-4 animate-fade-up opacity-0 delay-600">
+                <button onclick="window.location.href='login.html'" class="w-full bg-white text-blue-600 py-4 rounded-xl font-bold text-lg">
+                    登入/註冊
+                </button>
+                <button onclick="window.location.href='home.html'" class="w-full bg-transparent border-2 border-white text-white py-4 rounded-xl font-bold text-lg">
+                    以訪客身份繼續
+                </button>
+            </div>
+            
+            <div class="mt-16 text-center animate-fade-up opacity-0 delay-600">
+                <p class="text-white text-sm opacity-80">
+                    360° 環景預約系統 | 版本 1.0
+                </p>
+            </div>
+        </div>
+    </div>
+<a href="index.html" class="gallery-button" title="切換到展示模式"><i class="fas fa-th-large"></i></a></body>
+</html> 

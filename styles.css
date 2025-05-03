@@ -1,0 +1,358 @@
+:root {
+    --primary-color: #2563EB;
+    --primary-dark: #1D4ED8;
+    --primary-light: #93C5FD;
+    --secondary-color: #10B981;
+    --accent-color: #F59E0B;
+    --danger-color: #EF4444;
+    --background-color: #F9FAFB;
+    --card-color: #FFFFFF;
+    --text-primary: #1F2937;
+    --text-secondary: #4B5563;
+    --text-muted: #9CA3AF;
+    --border-color: #E5E7EB;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-primary);
+    background-color: var(--background-color);
+    line-height: 1.5;
+}
+
+/* 狀態欄樣式 */
+.ios-status-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 16px;
+    background-color: var(--card-color);
+    font-size: 12px;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 40;
+}
+
+/* 導航欄樣式 */
+.ios-nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 16px;
+    background-color: var(--card-color);
+    position: relative;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* 按鈕樣式 */
+.ios-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.2s;
+    border: none;
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+}
+
+.ios-button:hover, .ios-button:focus {
+    background-color: var(--primary-dark);
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
+}
+
+.ios-button.secondary {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    border: 1px solid var(--border-color);
+    box-shadow: none;
+}
+
+.ios-button.secondary:hover, .ios-button.secondary:focus {
+    background-color: #EFF6FF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* 輸入框樣式 */
+.ios-input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-color);
+    font-size: 16px;
+    transition: all 0.2s;
+}
+
+.ios-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+/* 卡片樣式 */
+.ios-card {
+    background-color: var(--card-color);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ios-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.12);
+}
+
+.venue-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;
+}
+
+/* 列表項樣式 */
+.ios-list-item {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--card-color);
+    transition: background-color 0.2s;
+}
+
+.ios-list-item:last-child {
+    border-bottom: none;
+}
+
+.ios-list-item:hover {
+    background-color: #F3F4F6;
+}
+
+/* 底部導航欄 */
+.ios-tab-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px 0 24px;
+    background-color: var(--card-color);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.05);
+    border-top: 1px solid var(--border-color);
+    z-index: 30;
+}
+
+.ios-tab-bar-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 10px;
+    color: var(--text-secondary);
+    flex: 1;
+    padding: 4px 0;
+}
+
+.ios-tab-bar-icon {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.ios-tab-bar-item.active {
+    color: var(--primary-color);
+}
+
+/* 標記樣式 */
+.badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    background-color: var(--danger-color);
+    color: white;
+    font-size: 8px;
+    font-weight: bold;
+    width: 14px;
+    height: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+/* App內容區域 */
+.app-content {
+    margin-bottom: 72px; /* 為底部導航欄留出空間 */
+}
+
+/* Logo 樣式 */
+.app-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-logo-square {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.app-logo-circle {
+    width: 30px;
+    height: 30px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* 標題和段落樣式優化 */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary);
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+p {
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+
+/* 文字強調和輔助樣式 */
+.text-highlight {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.text-success {
+    color: var(--secondary-color);
+}
+
+.text-warning {
+    color: var(--accent-color);
+}
+
+.text-danger {
+    color: var(--danger-color);
+}
+
+/* 響應式優化 */
+@media (min-width: 640px) {
+    .ios-card {
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .ios-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* 動畫效果 */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* 切換開關樣式 */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+    background-color: var(--primary-color);
+}
+
+input:checked + .toggle-slider:before {
+    transform: translateX(20px);
+} 
+/* 展示模式按鈕樣式 */
+.gallery-button {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
+    z-index: 100;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.gallery-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.4);
+}

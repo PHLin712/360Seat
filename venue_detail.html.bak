@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>360度環景預約系統 - 商家詳情</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <!-- iOS 狀態欄 -->
+    <div class="ios-status-bar">
+        <div>9:41</div>
+        <div class="flex items-center gap-1">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- 導航欄 -->
+    <div class="ios-nav-bar">
+        <div class="absolute left-4">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        <h1 class="text-xl font-bold">商家詳情</h1>
+        <div class="absolute right-4">
+            <i class="far fa-heart"></i>
+        </div>
+    </div>
+
+    <!-- 主內容 -->
+    <div class="app-content pb-24">
+        <!-- 商家封面照片滑動區 -->
+        <div class="relative h-64 bg-black">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0" alt="頂級日式料理" class="w-full h-full object-cover">
+            <div class="absolute bottom-4 right-4 flex space-x-2">
+                <button class="w-10 h-10 rounded-full bg-black bg-opacity-60 flex items-center justify-center text-white">
+                    <i class="fas fa-share-alt"></i>
+                </button>
+                <button class="w-10 h-10 rounded-full bg-black bg-opacity-60 flex items-center justify-center text-white">
+                    <i class="fas fa-camera"></i>
+                </button>
+            </div>
+            <div class="absolute bottom-4 left-4 flex items-center bg-black bg-opacity-60 px-2 py-1 rounded-md text-white text-xs">
+                <i class="fas fa-image mr-1"></i>
+                <span>1/8</span>
+            </div>
+        </div>
+
+        <!-- 商家基本信息 -->
+        <div class="bg-white p-4 border-b border-gray-200">
+            <h1 class="text-2xl font-bold mb-1">頂級日式料理</h1>
+            <div class="flex items-center text-yellow-500 text-sm mb-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span class="text-gray-500 ml-1">5.0 (210 評價)</span>
+            </div>
+            <div class="flex flex-wrap mb-3">
+                <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded mr-2 mb-2">精緻料理</span>
+                <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded mr-2 mb-2">日本料理</span>
+                <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded mr-2 mb-2">視野絕佳</span>
+                <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded mr-2 mb-2">情侶約會</span>
+                <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded mr-2 mb-2">米其林</span>
+            </div>
+            <div class="flex items-center mb-2 text-sm text-gray-600">
+                <i class="fas fa-map-marker-alt mr-2"></i>
+                <span>大安區敦化南路45號12樓</span>
+            </div>
+            <div class="flex items-center mb-2 text-sm text-gray-600">
+                <i class="fas fa-phone-alt mr-2"></i>
+                <span>02-2711-0123</span>
+            </div>
+            <div class="flex items-center text-sm text-gray-600">
+                <i class="far fa-clock mr-2"></i>
+                <span>週一至週日 11:30-14:30, 17:30-22:00</span>
+            </div>
+        </div>
+
+        <!-- 操作按鈕 -->
+        <div class="bg-white p-4 flex space-x-3 mb-3 border-b border-gray-200">
+            <button class="flex-1 ios-button" onclick="window.location.href='360_view.html'">
+                <i class="fas fa-vr-cardboard mr-1"></i>
+                360°環景預覽
+            </button>
+            <button class="flex-1 ios-button secondary" onclick="window.location.href='bidding.html'">
+                <i class="fas fa-directions mr-1"></i>
+                導航前往
+            </button>
+        </div>
+
+        <!-- 特色說明 -->
+        <div class="bg-white p-4 mb-3 border-b border-gray-200">
+            <h2 class="font-bold text-lg mb-3">商家特色</h2>
+            <p class="text-gray-600 text-sm">
+                本店提供頂級日式料理體驗，主廚擁有20年日本料理經驗，曾在東京米其林三星餐廳任職。我們堅持使用當季新鮮食材，每日限量供應。店內環境位於12樓，可將台北市美景盡收眼底，是商務宴請及重要約會的絕佳選擇。
+            </p>
+            <button class="text-blue-500 text-sm mt-2">
+                <span>查看更多</span>
+                <i class="fas fa-chevron-down ml-1"></i>
+            </button>
+        </div>
+
+        <!-- 用餐環境 -->
+        <div class="bg-white p-4 mb-3 border-b border-gray-200">
+            <h2 class="font-bold text-lg mb-3">用餐環境</h2>
+            <div class="flex space-x-3 overflow-x-auto pb-2">
+                <img src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d" alt="餐廳環境" class="w-32 h-32 rounded-lg object-cover flex-shrink-0">
+                <img src="https://images.unsplash.com/photo-1599458448510-59aecaea4752" alt="座位區" class="w-32 h-32 rounded-lg object-cover flex-shrink-0">
+                <img src="https://images.unsplash.com/photo-1736040891913-d9ab60510c52" alt="包廂" class="w-32 h-32 rounded-lg object-cover flex-shrink-0">
+                <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330" alt="窗景" class="w-32 h-32 rounded-lg object-cover flex-shrink-0">
+            </div>
+        </div>
+
+        <!-- 可預約時段 -->
+        <div class="bg-white p-4 mb-3 border-b border-gray-200">
+            <h2 class="font-bold text-lg mb-3">可預約時段</h2>
+            
+            <!-- 日期選擇器 -->
+            <div class="flex space-x-3 overflow-x-auto pb-3 mb-4">
+                <div class="flex flex-col items-center">
+                    <div class="w-14 h-14 rounded-full bg-blue-500 text-white flex flex-col items-center justify-center">
+                        <span class="text-xs">今天</span>
+                        <span class="font-bold">12/15</span>
+                    </div>
+                    <span class="text-xs mt-1">週五</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-14 h-14 rounded-full bg-white border border-gray-300 flex flex-col items-center justify-center">
+                        <span class="text-xs text-gray-500">明天</span>
+                        <span class="font-bold">12/16</span>
+                    </div>
+                    <span class="text-xs mt-1">週六</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-14 h-14 rounded-full bg-white border border-gray-300 flex flex-col items-center justify-center">
+                        <span class="font-bold">12/17</span>
+                    </div>
+                    <span class="text-xs mt-1">週日</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-14 h-14 rounded-full bg-white border border-gray-300 flex flex-col items-center justify-center">
+                        <span class="font-bold">12/18</span>
+                    </div>
+                    <span class="text-xs mt-1">週一</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-14 h-14 rounded-full bg-white border border-gray-300 flex flex-col items-center justify-center">
+                        <span class="font-bold">12/19</span>
+                    </div>
+                    <span class="text-xs mt-1">週二</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-14 h-14 rounded-full bg-white border border-gray-300 flex flex-col items-center justify-center">
+                        <span class="font-bold">12/20</span>
+                    </div>
+                    <span class="text-xs mt-1">週三</span>
+                </div>
+            </div>
+
+            <!-- 時段選擇 -->
+            <div class="grid grid-cols-3 gap-3">
+                <div class="rounded-lg border border-gray-300 p-2 text-center">
+                    <span class="text-sm">午餐</span>
+                    <div class="font-bold">11:30</div>
+                </div>
+                <div class="rounded-lg border border-gray-300 p-2 text-center">
+                    <span class="text-sm">午餐</span>
+                    <div class="font-bold">12:00</div>
+                </div>
+                <div class="rounded-lg border border-gray-300 p-2 text-center bg-gray-100 text-gray-400">
+                    <span class="text-sm">午餐</span>
+                    <div class="font-bold">12:30</div>
+                    <span class="text-xs">已滿</span>
+                </div>
+                <div class="rounded-lg border border-gray-300 p-2 text-center">
+                    <span class="text-sm">午餐</span>
+                    <div class="font-bold">13:00</div>
+                </div>
+                <div class="rounded-lg border border-gray-300 p-2 text-center">
+                    <span class="text-sm">午餐</span>
+                    <div class="font-bold">13:30</div>
+                </div>
+                <div class="rounded-lg border border-gray-300 p-2 text-center bg-gray-100 text-gray-400">
+                    <span class="text-sm">午餐</span>
+                    <div class="font-bold">14:00</div>
+                    <span class="text-xs">已滿</span>
+                </div>
+                <div class="rounded-lg border border-blue-500 p-2 text-center bg-blue-50 text-blue-600">
+                    <span class="text-sm">晚餐</span>
+                    <div class="font-bold">18:00</div>
+                    <span class="text-xs">推薦</span>
+                </div>
+                <div class="rounded-lg border border-gray-300 p-2 text-center">
+                    <span class="text-sm">晚餐</span>
+                    <div class="font-bold">18:30</div>
+                </div>
+                <div class="rounded-lg border border-gray-300 p-2 text-center">
+                    <span class="text-sm">晚餐</span>
+                    <div class="font-bold">19:00</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 用餐評價 -->
+        <div class="bg-white p-4 mb-3">
+            <div class="flex justify-between items-center mb-3">
+                <h2 class="font-bold text-lg">用戶評價</h2>
+                <a href="#" class="text-blue-500 text-sm">查看全部 210 則評價</a>
+            </div>
+
+            <!-- 評價統計 -->
+            <div class="flex items-center mb-4">
+                <div class="text-3xl font-bold mr-3">5.0</div>
+                <div class="flex flex-col flex-1">
+                    <div class="flex text-yellow-500 mb-1">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="w-full bg-gray-200 h-1.5 rounded-full overflow-hidden">
+                        <div class="bg-yellow-500 h-full rounded-full" style="width: 95%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 評價列表 -->
+            <div class="border-t border-gray-200 pt-4">
+                <!-- 評價項目 1 -->
+                <div class="mb-4">
+                    <div class="flex items-center mb-2">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde" alt="用戶頭像" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <div class="font-medium">張先生</div>
+                            <div class="text-xs text-gray-500">2023-12-10</div>
+                        </div>
+                        <div class="ml-auto flex text-yellow-500 text-sm">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                        環境非常舒適，服務一流，最喜歡的是窗戶旁的座位，台北夜景盡收眼底。食物的質量和味道都很出色，特別是主廚特製的刺身拼盤，新鮮程度無可挑剔。
+                    </p>
+                    <div class="mt-2 flex space-x-2 overflow-x-auto">
+                        <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c" alt="用戶上傳照片" class="w-16 h-16 rounded-md object-cover">
+                        <img src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351" alt="用戶上傳照片" class="w-16 h-16 rounded-md object-cover">
+                    </div>
+                </div>
+
+                <!-- 評價項目 2 -->
+                <div class="pt-4 border-t border-gray-200">
+                    <div class="flex items-center mb-2">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" alt="用戶頭像" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <div class="font-medium">李小姐</div>
+                            <div class="text-xs text-gray-500">2023-12-05</div>
+                        </div>
+                        <div class="ml-auto flex text-yellow-500 text-sm">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                        在這裡慶祝了結婚紀念日，體驗非常棒。選擇了主廚推薦套餐，價格雖然不便宜但非常值得。服務人員很細心，知道我們是慶祝紀念日還特別贈送了甜點。360度環景訂位系統讓我們事先挑選了最佳座位。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部固定的預約按鈕 -->
+    <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 flex justify-between items-center">
+        <div>
+            <div class="text-sm text-gray-500">人均消費</div>
+            <div class="text-xl font-bold text-blue-600">NT$ 2,500 起</div>
+        </div>
+        <button class="ios-button px-8">
+            立即訂座
+        </button>
+    </div>
+</body>
+</html> 

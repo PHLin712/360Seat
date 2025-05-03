@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>360度環景預約系統 - 商家後台</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <!-- iOS 狀態欄 -->
+    <div class="ios-status-bar">
+        <div>9:41</div>
+        <div class="flex items-center gap-1">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- 導航欄 -->
+    <div class="ios-nav-bar">
+        <h1 class="text-xl font-bold">商家管理後台</h1>
+        <div class="absolute right-4">
+            <i class="fas fa-bell"></i>
+        </div>
+    </div>
+
+    <!-- 主內容 -->
+    <div class="app-content">
+        <!-- 商家信息頭部 -->
+        <div class="bg-gradient-to-r from-blue-700 to-indigo-800 p-4 text-white">
+            <div class="flex items-center">
+                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0" alt="餐廳" class="w-16 h-16 rounded-lg object-cover mr-3">
+                <div>
+                    <h2 class="text-xl font-bold mb-1">頂級日式料理</h2>
+                    <div class="flex items-center text-sm mb-1 text-blue-100">
+                        <i class="fas fa-map-marker-alt mr-1"></i>
+                        <span>大安區敦化南路45號12樓</span>
+                    </div>
+                    <div class="flex items-center text-sm text-blue-100">
+                        <i class="fas fa-store mr-1"></i>
+                        <span>商家ID: M10045</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 統計卡片區 -->
+        <div class="p-4 grid grid-cols-2 gap-4">
+            <div class="bg-white rounded-lg p-4 shadow-sm">
+                <div class="text-gray-500 text-sm mb-1">今日預約</div>
+                <div class="text-2xl font-bold">12</div>
+                <div class="text-xs text-green-500 mt-1">
+                    <i class="fas fa-arrow-up"></i>
+                    <span>比昨日增加 3</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg p-4 shadow-sm">
+                <div class="text-gray-500 text-sm mb-1">今日收入</div>
+                <div class="text-2xl font-bold">NT$ 26,800</div>
+                <div class="text-xs text-green-500 mt-1">
+                    <i class="fas fa-arrow-up"></i>
+                    <span>比昨日增加 12%</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg p-4 shadow-sm">
+                <div class="text-gray-500 text-sm mb-1">座位上座率</div>
+                <div class="text-2xl font-bold">85%</div>
+                <div class="text-xs text-green-500 mt-1">
+                    <i class="fas fa-arrow-up"></i>
+                    <span>比上週增加 5%</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg p-4 shadow-sm">
+                <div class="text-gray-500 text-sm mb-1">待確認預約</div>
+                <div class="text-2xl font-bold">5</div>
+                <div class="text-xs text-red-500 mt-1">
+                    <i class="fas fa-clock"></i>
+                    <span>需要處理</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 功能選單區 -->
+        <div class="px-4 mb-6">
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                <div class="grid grid-cols-3">
+                    <a href="#" class="flex flex-col items-center justify-center py-4 border-r border-b border-gray-100">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-2">
+                            <i class="fas fa-chair text-blue-600 text-lg"></i>
+                        </div>
+                        <span class="text-sm">座位管理</span>
+                    </a>
+                    <a href="#" class="flex flex-col items-center justify-center py-4 border-r border-b border-gray-100">
+                        <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mb-2">
+                            <i class="fas fa-calendar-alt text-green-600 text-lg"></i>
+                        </div>
+                        <span class="text-sm">預約管理</span>
+                    </a>
+                    <a href="#" class="flex flex-col items-center justify-center py-4 border-b border-gray-100">
+                        <div class="w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center mb-2">
+                            <i class="fas fa-gavel text-yellow-600 text-lg"></i>
+                        </div>
+                        <span class="text-sm">競價設定</span>
+                    </a>
+                    <a href="#" class="flex flex-col items-center justify-center py-4 border-r border-gray-100">
+                        <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mb-2">
+                            <i class="fas fa-chart-bar text-purple-600 text-lg"></i>
+                        </div>
+                        <span class="text-sm">營收分析</span>
+                    </a>
+                    <a href="#" class="flex flex-col items-center justify-center py-4 border-r border-gray-100">
+                        <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center mb-2">
+                            <i class="fas fa-cog text-red-600 text-lg"></i>
+                        </div>
+                        <span class="text-sm">店鋪設定</span>
+                    </a>
+                    <a href="#" class="flex flex-col items-center justify-center py-4">
+                        <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center mb-2">
+                            <i class="fas fa-users text-indigo-600 text-lg"></i>
+                        </div>
+                        <span class="text-sm">會員管理</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 360環景編輯區 -->
+        <div class="px-4 mb-6">
+            <div class="flex justify-between items-center mb-3">
+                <h3 class="font-bold text-lg">360°環景座位編輯</h3>
+                <button class="text-blue-500 text-sm font-medium">
+                    編輯環景
+                </button>
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+                <div class="relative h-48 bg-gray-800">
+                    <img src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d" alt="餐廳環景" class="w-full h-full object-cover opacity-70">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-white">
+                        <i class="fas fa-vr-cardboard text-3xl mb-2"></i>
+                        <span class="font-medium">360°環景管理</span>
+                        <button class="mt-3 bg-white text-blue-600 px-4 py-1.5 rounded-lg text-sm">
+                            進入編輯
+                        </button>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <div class="font-medium">環景設置狀態</div>
+                        <div class="text-green-600 text-sm font-medium">
+                            <i class="fas fa-check-circle"></i>
+                            <span>已完成設置</span>
+                        </div>
+                    </div>
+                    <div class="text-sm text-gray-600 mb-3">
+                        上次更新時間: 2023/12/10 15:30
+                    </div>
+                    <div class="flex space-x-3">
+                        <div class="flex-1 text-center p-2 bg-gray-50 rounded">
+                            <div class="text-sm text-gray-500 mb-1">總座位數</div>
+                            <div class="font-bold">24</div>
+                        </div>
+                        <div class="flex-1 text-center p-2 bg-gray-50 rounded">
+                            <div class="text-sm text-gray-500 mb-1">VIP座位</div>
+                            <div class="font-bold">6</div>
+                        </div>
+                        <div class="flex-1 text-center p-2 bg-gray-50 rounded">
+                            <div class="text-sm text-gray-500 mb-1">環景照片數</div>
+                            <div class="font-bold">12</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 今日預約列表 -->
+        <div class="px-4 mb-6">
+            <div class="flex justify-between items-center mb-3">
+                <h3 class="font-bold text-lg">今日預約（12/15）</h3>
+                <button class="text-blue-500 text-sm font-medium">
+                    查看全部
+                </button>
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+                <div class="p-4 border-b border-gray-100">
+                    <div class="flex justify-between mb-2">
+                        <div class="font-medium">陳先生 (2人)</div>
+                        <div class="text-sm text-blue-600 font-medium">
+                            18:00
+                        </div>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600 mb-2">
+                        <div class="bg-yellow-100 text-yellow-600 px-2 py-0.5 rounded text-xs mr-2">
+                            VIP座位
+                        </div>
+                        <span>B2 (窗邊座位)</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="text-sm text-gray-500">
+                            訂單編號: #BK123456
+                        </div>
+                        <div class="flex space-x-2">
+                            <button class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">
+                                <i class="fas fa-check"></i>
+                                <span>確認</span>
+                            </button>
+                            <button class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm">
+                                <i class="fas fa-times"></i>
+                                <span>拒絕</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 border-b border-gray-100">
+                    <div class="flex justify-between mb-2">
+                        <div class="font-medium">林小姐 (4人)</div>
+                        <div class="text-sm text-blue-600 font-medium">
+                            19:30
+                        </div>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600 mb-2">
+                        <div class="bg-green-100 text-green-600 px-2 py-0.5 rounded text-xs mr-2">
+                            普通座位
+                        </div>
+                        <span>A3 (中央區域)</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="text-sm text-gray-500">
+                            訂單編號: #BK123457
+                        </div>
+                        <div class="flex space-x-2">
+                            <button class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">
+                                <i class="fas fa-check"></i>
+                                <span>確認</span>
+                            </button>
+                            <button class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm">
+                                <i class="fas fa-times"></i>
+                                <span>拒絕</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <div class="flex justify-between mb-2">
+                        <div class="font-medium">王先生 (5人)</div>
+                        <div class="text-sm text-blue-600 font-medium">
+                            20:00
+                        </div>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600 mb-2">
+                        <div class="bg-blue-100 text-blue-600 px-2 py-0.5 rounded text-xs mr-2">
+                            包廂
+                        </div>
+                        <span>C1 (大型包廂)</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="text-sm text-gray-500">
+                            訂單編號: #BK123458
+                        </div>
+                        <div class="flex space-x-2">
+                            <button class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">
+                                <i class="fas fa-check"></i>
+                                <span>確認</span>
+                            </button>
+                            <button class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm">
+                                <i class="fas fa-times"></i>
+                                <span>拒絕</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 text-center border-t border-gray-100">
+                    <a href="#" class="text-blue-500 text-sm">
+                        查看更多預約
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 座位狀態管理區 -->
+        <div class="px-4 mb-20">
+            <div class="flex justify-between items-center mb-3">
+                <h3 class="font-bold text-lg">座位狀態管理</h3>
+                <div class="text-sm">
+                    <select class="bg-gray-50 border border-gray-300 rounded px-2 py-1">
+                        <option>今日 (12/15)</option>
+                        <option>明日 (12/16)</option>
+                        <option>後日 (12/17)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+                <div class="p-4">
+                    <div class="flex justify-between mb-4">
+                        <div class="font-medium">座位總覽</div>
+                        <div class="text-sm">
+                            <select class="bg-gray-50 border border-gray-300 rounded px-2 py-1">
+                                <option>全天</option>
+                                <option>午餐</option>
+                                <option>晚餐</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- 座位狀態圖例 -->
+                    <div class="flex flex-wrap gap-3 mb-4">
+                        <div class="flex items-center">
+                            <div class="w-4 h-4 bg-green-500 rounded-full mr-2"></div>
+                            <span class="text-sm">可預訂 (8)</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-4 h-4 bg-red-500 rounded-full mr-2"></div>
+                            <span class="text-sm">已預訂 (12)</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-4 h-4 bg-yellow-500 rounded-full mr-2"></div>
+                            <span class="text-sm">鎖定 (4)</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-4 h-4 bg-purple-500 rounded-full mr-2"></div>
+                            <span class="text-sm">競價中 (2)</span>
+                        </div>
+                    </div>
+
+                    <!-- 座位模擬視圖 -->
+                    <div class="border border-gray-200 rounded-lg p-4 mb-4 relative h-64 bg-gray-50">
+                        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-gray-400">
+                            <i class="fas fa-chair text-3xl mb-2"></i>
+                            <div>座位佈局視圖</div>
+                            <div class="text-sm">請點擊上方的「進入編輯」按鈕進行360°環景座位管理</div>
+                        </div>
+                    </div>
+
+                    <!-- 批量操作 -->
+                    <div class="flex space-x-3">
+                        <button class="flex-1 border border-blue-500 text-blue-500 rounded-lg py-2 text-sm font-medium">
+                            <i class="fas fa-lock mr-1"></i>
+                            鎖定座位
+                        </button>
+                        <button class="flex-1 border border-green-500 text-green-500 rounded-lg py-2 text-sm font-medium">
+                            <i class="fas fa-unlock mr-1"></i>
+                            開放座位
+                        </button>
+                        <button class="flex-1 border border-purple-500 text-purple-500 rounded-lg py-2 text-sm font-medium">
+                            <i class="fas fa-gavel mr-1"></i>
+                            設置競價
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部固定的功能按鈕 -->
+    <div class="ios-tab-bar bg-white">
+        <div class="ios-tab-bar-item active">
+            <i class="fas fa-home ios-tab-bar-icon"></i>
+            <span>首頁</span>
+        </div>
+        <div class="ios-tab-bar-item">
+            <i class="fas fa-calendar-check ios-tab-bar-icon"></i>
+            <span>預約</span>
+        </div>
+        <div class="ios-tab-bar-item">
+            <i class="fas fa-chart-line ios-tab-bar-icon"></i>
+            <span>分析</span>
+        </div>
+        <div class="ios-tab-bar-item">
+            <i class="fas fa-user-cog ios-tab-bar-icon"></i>
+            <span>設定</span>
+        </div>
+    </div>
+</body>
+</html> 
